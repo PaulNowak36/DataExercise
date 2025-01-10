@@ -1,10 +1,9 @@
 #include <iostream>
+#include <list>
 #include "frenchFries.h"
 #include "manageData.h"
 
 using namespace std;
-
-
 
 int main()
 {
@@ -12,10 +11,10 @@ int main()
     frenchFriesStand saqueudin("Peuchere", "Lille de quoi", "Francois le Breton", 30000, 750, 15);
     frenchFriesStand dubrin("Le golfe", "Berck !", "Eul postier", 1000, 30, 2);
 
-    frenchFriesStand fries[3] = {momo, saqueudin, dubrin};
+    list<frenchFriesStand> fries = {momo, saqueudin, dubrin};
 
     cout << "PINGAS" << endl;
     
-    getFrenchStand(fries, 0);
+    presentFrenchStandsList(fries, 3);
 
 }
