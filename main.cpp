@@ -1,21 +1,21 @@
 #include <iostream>
-#include "frenchFries.cpp"
+#include "frenchFries.h"
+#include "manageData.h"
 
 using namespace std;
 
+
+
 int main()
 {
-    frenchFriesStand biloute("Friterie a momo", "Point-a-Pitre", "Momo Jr.", 20000, 500, 6);
+    frenchFriesStand momo("Friterie a momo", "Point-a-Pitre", "Momo Jr.", 20000, 500, 6);
+    frenchFriesStand saqueudin("Peuchere", "Lille de quoi", "Francois le Breton", 30000, 750, 15);
+    frenchFriesStand dubrin("Le golfe", "Berck !", "Eul postier", 1000, 30, 2);
+
+    frenchFriesStand fries[3] = {momo, saqueudin, dubrin};
 
     cout << "PINGAS" << endl;
-    cout << "My fav french stand is: " << biloute.name << endl;
-    cout << "Its location is in: " << biloute.city << endl;
-    cout << "The owner name is: " << biloute.owner_Name << endl;
-    cout << "It has a budget of : " << biloute.budget << " euros" << endl;
-    cout << "It has a fries stock of : " << biloute.fries_Stock << " kilos." << endl;
-    cout << "Its number of employees is : " << biloute.nb_Employees << endl;
-
-
-
+    
+    presentFrenchStands(fries, 3);
 
 }

@@ -1,3 +1,6 @@
+#ifndef FRENCHFRIESSTAND_H
+#define FRENCHFRIESSTAND_H
+
 #include <iostream>
 
 using namespace std;
@@ -21,3 +24,5 @@ class frenchFriesStand {
       nb_Employees = c;
     }
 };
+
+#endif // FRENCHFRIESSTAND_H
