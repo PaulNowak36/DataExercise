@@ -16,6 +16,6 @@ int main()
 
     cout << "PINGAS" << endl;
     
-    presentFrenchStands(fries, 3);
+    getFrenchStand(fries, 0);
 
 }

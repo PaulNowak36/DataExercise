@@ -20,4 +20,16 @@ void presentFrenchStands(frenchFriesStand* numArray, int size)
     }   
 }
 
+void getFrenchStand(frenchFriesStand* numArray, int standNumber)
+{
+    cout << "My fav french stand is: " << numArray[standNumber].name << endl;
+    cout << "Its location is in: " << numArray[standNumber].city << endl;
+    cout << "The owner name is: " << numArray[standNumber].owner_Name << endl;
+    cout << "It has a budget of : " << numArray[standNumber].budget << " euros" << endl;
+    cout << "It has a fries stock of : " << numArray[standNumber].fries_Stock << " kilos." << endl;
+    cout << "Its number of employees is : " << numArray[standNumber].nb_Employees << endl;   
+    cout << endl;
+
+}
+
 #endif
