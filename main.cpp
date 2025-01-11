@@ -16,8 +16,13 @@ int main()
 
 
     cout << "PINGAS" << endl;
-    presentFrenchStandsList(fries, fries.size());
-    addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4);
+    presentFrenchStandsList(fries, fries.size());/* 
+    addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4); */
+
+    cout << "NOW CHANGE" << endl;
+    cout << endl;
+
+    removeFrenchStand(fries, 1);
     presentFrenchStandsList(fries, fries.size());
 
 }

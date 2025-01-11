@@ -8,25 +8,26 @@
 using namespace std;
 
 // get a certain French Fries Stand and display its data
-void getFrenchStand(const list<frenchFriesStand>& stands,  int standNumber)
+void getFrenchStand(const list<frenchFriesStand>& stand,  int standNumber)
 {
     
-    if (stands.empty())
-    {
+    if (stand.empty())
+    {//check if the list isn't empty
         cout << "The French Fries Stand list is empty !" << endl;
         return;
     }
 
-    if (standNumber < 0 || standNumber >= static_cast<int>(stands.size()))
-    {
+    if (standNumber < 0 || standNumber >= static_cast<int>(stand.size()))
+    {//check if the target index is valid and exists
         cout << "Invalid stand number!" << endl;
         return;
     }
 
     // Get the stand at the specified index
-    auto it = stands.begin();
+    auto it = stand.begin();
     advance(it, standNumber); // Move iterator to the desired index
 
+    //Display the data
     cout << "My fav french stand is: " << it->name << endl;
     cout << "Its number in the list is: " << standNumber << endl;
     cout << "Its location is in: " << it->city << endl;
@@ -42,22 +43,46 @@ void getFrenchStand(const list<frenchFriesStand>& stands,  int standNumber)
 void presentFrenchStandsList(const list<frenchFriesStand>& standList, int size)
 {
     if (standList.empty())
-    {
+    {//check if the list isn't empty
         cout << "The French Fries Stand list is empty !" << endl;
         return;
     }
 
     for (int i = 0; i < size; i++)
-    {
+    {// check the data of each stand from the list
         getFrenchStand(standList, i);
     }   
 }
 
 //add a new French Fries Stand with its attributes at the end of a list
-void addFrenchStand(list<frenchFriesStand>& stands, string name, string city, string owner, int budget, int stock, int employees)
+void addFrenchStand(list<frenchFriesStand>& standList, string name, string city, string owner, int budget, int stock, int employees)
 {
+    //Create a new french fries stand based on the user's parameters
     frenchFriesStand newStand = frenchFriesStand(name, city, owner, budget, stock, employees);
-    stands.push_back(newStand);
+    standList.push_back(newStand); 
+}
+
+void removeFrenchStand(list<frenchFriesStand>& standList, int standNumber)
+{
+    if (standList.empty())
+    {//check if the list isn't empty
+        cout << "The French Fries Stand list is empty !" << endl;
+        return;
+    }
+
+    if (standNumber < 0 || standNumber >= static_cast<int>(standList.size()))
+     {//check if the target index is valid and exists
+        cout << "Invalid stand number!" << endl;
+        return;
+    }
+
+    // Get the stand at the specified index
+    auto it = standList.begin();
+    advance(it, standNumber); // Move iterator to the desired index
+
+    // erase the stand at index n from the list
+    standList.erase(it); 
+
 }
 
 #endif
