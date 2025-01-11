@@ -12,9 +12,12 @@ int main()
     frenchFriesStand dubrin("Le golfe", "Berck !", "Eul postier", 1000, 30, 2);
 
     list<frenchFriesStand> fries = {momo, saqueudin, dubrin};
+    list<frenchFriesStand> noFries;
+
 
     cout << "PINGAS" << endl;
-    
-    presentFrenchStandsList(fries, 3);
+    presentFrenchStandsList(fries, fries.size());
+    addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4);
+    presentFrenchStandsList(fries, fries.size());
 
 }
