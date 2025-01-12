@@ -16,13 +16,25 @@ int main()
 
 
     cout << "PINGAS" << endl;
-    presentFrenchStandsList(fries, fries.size());/* 
-    addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4); */
+    /* presentFrenchStandsList(fries, fries.size()); */
+    /* addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4); */
+
+    getFrenchStand(fries, 2);
 
     cout << "NOW CHANGE" << endl;
     cout << endl;
 
-    removeFrenchStand(fries, 1);
-    presentFrenchStandsList(fries, fries.size());
+    /* removeFrenchStand(fries, 1); */
+
+    updateFrenchStandName(fries, 2, "Momo JR");
+    updateFrenchStandCity(fries, 2, "Francfort");
+    updateFrenchStandOwner(fries, 2, "Momo Junior JR");
+    updateFrenchStandBudget(fries, 2, 1400);
+    updateFrenchStandStock(fries, 2, 99);
+    updateFrenchStandStaff(fries, 2, 5);
+
+    getFrenchStand(fries, 2);
+
+    /* presentFrenchStandsList(fries, fries.size()); */
 
 }
