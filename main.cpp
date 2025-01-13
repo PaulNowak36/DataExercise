@@ -6,6 +6,7 @@
 using namespace std;
 
 int main()
+
 {
     frenchFriesStand momo("Friterie a momo", "Point-a-Pitre", "Momo Jr.", 20000, 500, 6);
     frenchFriesStand saqueudin("Peuchere", "Lille de quoi", "Francois le Breton", 30000, 750, 15);
@@ -14,8 +15,7 @@ int main()
     list<frenchFriesStand> fries = {momo, saqueudin, dubrin};
     list<frenchFriesStand> noFries;
 
-
-    cout << "PINGAS" << endl;
+    cout << "SNOOPING AS USUAL I SEE" << endl;
     /* presentFrenchStandsList(fries, fries.size()); */
     /* addFrenchStand(fries, "Barack", "St Pol", "Polo", 3500, 234, 4); */
 
